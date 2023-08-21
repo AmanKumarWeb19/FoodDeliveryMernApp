@@ -8,7 +8,11 @@ export const Cards = () => {
           className="card mt-3"
           style={{ width: "18rem", maxHeight: "360px" }}
         >
-          <img src="..." className="card-img-top" alt="..." />
+          <img
+            src="https://img.freepik.com/premium-photo/chilli-paneer-dry-is-made-using-cottage-cheese-indo-chinese-food_466689-76879.jpg"
+            className="card-img-top"
+            alt="..."
+          />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
             <p className="card-text">This is some important text.</p>
