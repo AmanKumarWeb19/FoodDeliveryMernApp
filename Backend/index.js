@@ -1,15 +1,19 @@
 const express = require("express");
 const app = express();
-const port = 5000;
+require("dotenv").config();
 
-const connection = require("./config/db");
+const { connection } = require("./config/db");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Welcome to food app");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-  connection;
-  console.log("coneected to mongoDB")
+app.listen(process.env.PORT, async () => {
+  try {
+    await connection;
+    console.log("Server is Connected");
+  } catch (err) {
+    console.log("Server is not Connected");
+  }
+  console.log(`server is running at 5000`);
 });
